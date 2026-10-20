@@ -7,7 +7,7 @@ editor: visual
 ## Sara Townsend Escalante s263516
 
 ```{r}
-
+print(2+2)
 ```
 
 ## Vera Vecherskaia s263709 
