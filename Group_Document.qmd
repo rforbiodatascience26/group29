@@ -22,6 +22,12 @@ print(2+2)
 print("Hello World")
 ```
 
+### New feature
+
+```{r}
+2*2*2
+```
+
 ## Diana Eliza Manoliu s262118
 
 ```{r}
