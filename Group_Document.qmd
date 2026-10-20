@@ -10,7 +10,11 @@ editor: visual
 print(2+2)
 ```
 
-## Vera Vecherskaia s263709
+## Vera Vecherskaia s263709 
+
+## New feature
+
+*This is a new feature I added, check it out!*
 
 ```{r}
 print("Hi everyone! This is my code block")
