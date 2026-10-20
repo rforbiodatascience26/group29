@@ -1,0 +1,37 @@
+---
+title: "Group Document"
+format: html
+editor: visual
+---
+
+## Sara Townsend Escalante s263516
+
+```{r}
+
+```
+
+## Vera Vecherskaia s263709 
+
+```{r}
+
+```
+
+## Daniel Cifuentes García s263476 
+
+```{r}
+
+```
+
+## Diana Eliza Manoliu s262118 
+
+```{r}
+
+```
+
+## Jose Antonio Muriel Muriel s263486
+
+```{r}
+
+```
+
+Great job team! :)
