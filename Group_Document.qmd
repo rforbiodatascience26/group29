@@ -17,6 +17,11 @@ print("Im going to miss my spotify account")
 ```
 
 ## Vera Vecherskaia s263709
+## Vera Vecherskaia s263709 
+
+## New feature
+
+*This is a new feature I added, check it out!*
 
 ```{r}
 print("Hi everyone! This is my code block")
@@ -28,9 +33,21 @@ print("Hi everyone! This is my code block")
 print("Hello World")
 ```
 
+### New feature
+
+```{r}
+2*2*2
+```
+
 ## Diana Eliza Manoliu s262118
 
 Here's some text : )
+
+### New feature
+
+```{r}
+print("A new feature")
+```
 
 ## Jose Antonio Muriel Muriel s263486
 
