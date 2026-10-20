@@ -26,6 +26,12 @@ print("Hello World")
 
 Here's some text : )
 
+### New feature
+
+```{r}
+print("A new feature")
+```
+
 ## Jose Antonio Muriel Muriel s263486
 
 ```{r}
