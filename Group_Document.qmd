@@ -7,22 +7,22 @@ editor: visual
 ## Sara Townsend Escalante s263516
 
 ```{r}
-
+print(2+2)
 ```
 
-## Vera Vecherskaia s263709 
+## Vera Vecherskaia s263709
 
 ```{r}
 
 ```
 
-## Daniel Cifuentes García s263476 
+## Daniel Cifuentes García s263476
 
 ```{r}
-
+print("Hello World")
 ```
 
-## Diana Eliza Manoliu s262118 
+## Diana Eliza Manoliu s262118
 
 ```{r}
 
