@@ -12,8 +12,10 @@ editor: visual
 
 ## Vera Vecherskaia s263709 
 
-```{r}
+three merge conflicts later...
 
+```{r}
+print("Hi everyone! This is my code block")
 ```
 
 ## Daniel Cifuentes García s263476 
