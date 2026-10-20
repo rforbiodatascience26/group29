@@ -7,19 +7,19 @@ editor: visual
 ## Sara Townsend Escalante s263516
 
 ```{r}
-
+print(2+2)
 ```
 
 ## Vera Vecherskaia s263709
 
 ```{r}
-
+print("Hi everyone! This is my code block")
 ```
 
 ## Daniel Cifuentes García s263476
 
 ```{r}
-
+print("Hello World")
 ```
 
 ## Diana Eliza Manoliu s262118
@@ -29,7 +29,7 @@ Here's some text : )
 ## Jose Antonio Muriel Muriel s263486
 
 ```{r}
-
+# la calabasa
 ```
 
 Great job team! :)
