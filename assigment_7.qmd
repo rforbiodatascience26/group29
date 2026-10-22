@@ -1,8 +1,20 @@
 ---
-title: "assigment_7"
-format: html
+title: "Lab 7 Assignment: Group 29"
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
+
+Sara Townsend Escalante s263516
+
+Vera Vecherskaia s263709
+
+Daniel Cifuentes Garcia s263476
+
+Diana Eliza Manoliu s262118
+
+Jose Antonio Muriel Muriel s263486
 
 ## Micro-report
 
