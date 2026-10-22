@@ -16,9 +16,13 @@ Diana Eliza Manoliu s262118
 
 Jose Antonio Muriel Muriel s263486
 
-## Micro-report
+## Principal component anaylisis in diabetes data set
 
 ### Introduction
+
+The data consist of 19 variables on 403 subjects from 1046 subjects who were interviewed in a study to understand the prevalence of obesity, diabetes, and other cardiovascular risk factors in central Virginia for African Americans. According to Dr John Hong, Diabetes Mellitus Type II (adult onset diabetes) is associated most strongly with obesity. The 403 subjects were the ones who were actually screened for diabetes. Glycosolated hemoglobin \> 7.0 is usually taken as a positive diagnosis of diabetes.
+
+The aim of this micro-report is to establish if there are any determining factors for diabetes diagnosis. Only cholesterol, glucose level, HDL, ratio and glycosolated hemoglobin are considered to perform PCA.
 
 ### Loading the data & initializing the libraries
 
@@ -35,6 +39,8 @@ diabetes <- read_csv("data/diabetes.csv")
 ```
 
 ### Re-structuring the data
+
+First, the relevant numerical columns are conserved. Also, a new column is created, to classify diabetes diagnoses based on the glycosolated hemoglobin threshold.
 
 ```{r}
 diabetes <- diabetes |>
