@@ -34,6 +34,15 @@ diabetes <- read_csv("data/diabetes.csv")
 
 ### Re-structuring the data
 
+```{r}
+diabetes <- diabetes |>
+  select('chol', 'stab.glu', 'hdl', 'ratio', 'glyhb') |>
+  mutate(diagnosis = case_when(
+    glyhb >= 7 ~ "diabetic",
+    glyhb < 7 ~ "not_diabetic"
+  ))
+```
+
 ### Analysis
 
 ### Conclusions - eliza
