@@ -24,6 +24,8 @@ Jose Antonio Muriel Muriel s263486
 
 ```{r}
 library("tidyverse")
+library("broom")
+library("cowplot")
 ```
 
 We are going to be working with the diabetes data set. The objective of this micro-report is finding out which out of all the possible variables determine the possibility of diabetes.
@@ -44,5 +46,24 @@ diabetes <- diabetes |>
 ```
 
 ### Analysis
+
+```{r}
+pca_fit <- diabetes %>%
+  drop_na() %>%
+  select(where(is.numeric)) %>%
+  prcomp(scale = TRUE)
+
+```
+
+```{r}
+pca_fit %>%
+  augment(diabetes) %>% 
+  ggplot(aes(.fittedPC1, .fittedPC2, color = diagnosis)) +
+  geom_point(size = 1.5) +
+  scale_color_manual(
+    values = c(diabetic = "#D55E00", not_diabetic = "#0072B2")
+  ) +
+  theme_half_open(12) + background_grid()
+```
 
 ### Conclusions
