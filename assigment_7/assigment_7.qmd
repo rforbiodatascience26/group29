@@ -40,6 +40,8 @@ diabetes <- read_csv("data/diabetes.csv")
 
 ### Re-structuring the data
 
+First, the relevant numerical columns are conserved. Also, a new column is created, to classify diabetes diagnoses based on the glycosolated hemoglobin threshold.
+
 ```{r}
 diabetes <- diabetes |>
   select('chol', 'stab.glu', 'hdl', 'ratio', 'glyhb') |>
@@ -51,4 +53,4 @@ diabetes <- diabetes |>
 
 ### Analysis
 
-### Conclusions - eliza
+### Conclusions
