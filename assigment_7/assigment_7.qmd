@@ -16,7 +16,7 @@ Diana Eliza Manoliu s262118
 
 Jose Antonio Muriel Muriel s263486
 
-## Micro-report
+## Principal component anaylisis in diabetes data set
 
 ### Introduction
 
