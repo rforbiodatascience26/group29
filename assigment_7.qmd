@@ -5,3 +5,11 @@ editor: visual
 ---
 
 ## Micro-report
+
+### Loading the data
+
+### Re-structuring the data
+
+### Representation
+
+### Conclusions
