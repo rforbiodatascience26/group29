@@ -125,3 +125,9 @@ pca_fit %>%
 We can see that the first PC explains 46% of the variance, PC1 and PC2 together explain 72%, and the first 3 principle components cover almost all variance (94%)
 
 ### Conclusions
+
+The PCA reveals that the diabetic and non-diabetic subjects have different patterns in the selected variables. The diabetic subjects tend to have higher PC1 values, while the non-diabetic subjects are more often concentrated around the lower PC1 values, suggesting that the main variation in the data is related to the differences between the two groups.
+
+The results also show that glyhb and stab.glu are important contributors to the variation in the data, suggesting that glucose-related measurements have a strong influence on how the subjects differ from one another. PC1 and PC2 together explain approximately 72% of the variation, offering a good overview of the dataset. The addition of the third principal component brings this percentage to approximately 94%, meaning that most of the variation in the data is captured by the first three components.
+
+Overall, the PCA suggests that, among the analysed variables, glucose-related measurements (glyhb, stab.glu) are strongly associated with the differences between diabetic and non-diabetic subjects. The other variables also contribute to the overall variation, though to a smaller extent.
