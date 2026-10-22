@@ -36,4 +36,4 @@ diabetes <- read_csv("data/diabetes.csv")
 
 ### Analysis
 
-### Conclusions - eliza
+### Conclusions
