@@ -18,7 +18,17 @@ Jose Antonio Muriel Muriel s263486
 
 ## Micro-report
 
-### Loading the data
+### Loading the data & initializing the libraries
+
+```{r}
+library("tidyverse")
+```
+
+We are going to be working with the diabetes data set. The objective of this micro-report is finding out which out of all the possible variables detemine the possibility of diabetes.
+
+```{r}
+diabetes <- read_csv("data/diabetes.csv")
+```
 
 ### Re-structuring the data
 
