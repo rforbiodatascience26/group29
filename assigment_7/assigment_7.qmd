@@ -30,6 +30,7 @@ The aim of this micro-report is to establish if there are any determining factor
 library("tidyverse")
 library("broom")
 library("cowplot")
+library("ggrepel")
 ```
 
 We are going to be working with the diabetes data set. The objective of this micro-report is finding out which out of all the possible variables determine the possibility of diabetes.
@@ -65,6 +66,8 @@ pca_fit <- diabetes_clean |>
 
 ```
 
+Using `broom::augment()`, we project the original samples onto the principal components (`.fittedPC1`, `.fittedPC2`) to explore how diabetic and non-diabetic individuals separate across the latent dimensions.
+
 ```{r}
 pca_fit |>
   augment(diabetes_clean) |>
@@ -77,7 +80,11 @@ pca_fit |>
   background_grid()
 ```
 
+Non-diabetic subjects are tightly clustered around the centre-left of the plot, while diabetic subjects are more spread out and shifted towards positive PC1 values.
+
 #### Rotation matrix
+
+We extract the rotation matrix using `broom::tidy()` with `matrix = "rotation"` to inspect the contribution (loadings) of each clinical measurement to each principal component.
 
 ```{r}
 
@@ -95,10 +102,14 @@ pca_fit |>
   pivot_wider(names_from = "PC", names_prefix = "PC", values_from = "value") |>
   ggplot(aes(PC1, PC2)) +
   geom_segment(xend = 0, yend = 0, arrow = arrow_style) +
-  geom_text(aes(label = column), hjust = 1, nudge_x = -0.02) +
+  geom_text_repel(aes(label = column)) +
+  xlim(-0.6, 0.7) +
+  ylim(-0.5, 0.85) +
   coord_fixed() +
   theme_minimal_grid(12)
 ```
+
+Glycosolated hemoglobin (glyhb), stabilised glucose (stab.glu), cholesterol (chol) and ratio point towards positive PC1, the same direction in which diabetic subjects are located. HDL points in the opposite direction, so higher HDL is associated with the non-diabetic side. Glyhb, stab.glu and chol point in a similar direction, so they are correlated.
 
 ### Data Variability explained by PCs
 
