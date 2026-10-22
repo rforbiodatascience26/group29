@@ -66,6 +66,8 @@ pca_fit <- diabetes_clean |>
 
 ```
 
+Using `broom::augment()`, we project the original samples onto the principal components (`.fittedPC1`, `.fittedPC2`) to explore how diabetic and non-diabetic individuals separate across the latent dimensions.
+
 ```{r}
 pca_fit |>
   augment(diabetes_clean) |>
@@ -81,6 +83,8 @@ pca_fit |>
 Non-diabetic subjects are tightly clustered around the centre-left of the plot, while diabetic subjects are more spread out and shifted towards positive PC1 values.
 
 #### Rotation matrix
+
+We extract the rotation matrix using `broom::tidy()` with `matrix = "rotation"` to inspect the contribution (loadings) of each clinical measurement to each principal component.
 
 ```{r}
 
@@ -106,5 +110,29 @@ pca_fit |>
 ```
 
 Glycosolated hemoglobin (glyhb), stabilised glucose (stab.glu), cholesterol (chol) and ratio point towards positive PC1, the same direction in which diabetic subjects are located. HDL points in the opposite direction, so higher HDL is associated with the non-diabetic side. Glyhb, stab.glu and chol point in a similar direction, so they are correlated.
+
+### Data Variability explained by PCs
+
+```{r}
+pca_fit %>%
+  tidy(matrix = "eigenvalues")
+
+
+```
+
+```{r}
+pca_fit %>%
+  tidy(matrix = "eigenvalues") %>%
+  ggplot(aes(PC, percent)) +
+  geom_col(fill = "#56B4E9", alpha = 0.8) +
+  scale_x_continuous(breaks = 1:9) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    expand = expansion(mult = c(0, 0.01))
+  ) +
+  theme_minimal_hgrid(12)
+```
+
+We can see that the first PC explains 46% of the variance, PC1 and PC2 together explain 72%, and the first 3 principle components cover almost all variance (94%)
 
 ### Conclusions
