@@ -43,6 +43,8 @@ diabetes <- diabetes |>
   ))
 ```
 
+tetas
+
 ### Analysis
 
 ### Conclusions - eliza
