@@ -6,13 +6,15 @@ editor: visual
 
 ## Micro-report
 
+### Introduction
+
 ### Loading the data & initializing the libraries
 
 ```{r}
 library("tidyverse")
 ```
 
-We are going to be working with the diabetes data set. The objective of this micro-report is finding out which out of all the possible variables detemine the possibility of diabetes.
+We are going to be working with the diabetes data set. The objective of this micro-report is finding out which out of all the possible variables determine the possibility of diabetes.
 
 ```{r}
 diabetes <- read_csv("data/diabetes.csv")
@@ -20,6 +22,6 @@ diabetes <- read_csv("data/diabetes.csv")
 
 ### Re-structuring the data
 
-### Representation
+### Analysis
 
-### Conclusions
+### Conclusions - eliza
